@@ -9,8 +9,8 @@
 
 <h1>Generatore di password</h1>
 
-<form action="">
-    <label for="password-length">Lunghezza password</label>
+<form action="./password" method="GET">
+    <label for="password-length">Lunghezza password:</label>
     <input type="number" name="password-length" id="password-length" min="6" value="6">
     <button type="submit">Invia</button>
 </form>
