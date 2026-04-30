@@ -9,7 +9,7 @@
 
 <h1>Generatore di password</h1>
 
-<form action="./password.php" method="GET">
+<form action="./result.php" method="GET">
     <label for="password-length">Lunghezza password:</label>
     <input type="number" name="password-length" id="password-length" min="6" value="6">
     <button type="submit">Invia</button>
