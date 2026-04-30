@@ -3,8 +3,32 @@ require_once "./functions.php";
 
 $repeat_char = false;
 
-if(isset($_GET["char-repetition"])) {
+if(isset($_GET["char-repetition"]) && $_GET["char-repetition"] === "on") {
     $repeat_char = true;
+};
+
+$use_letters_lowercase = true;
+
+if(isset($_GET["use-letters-lowercase"]) && $_GET["use-letters-lowercase"] === "on") {
+    $use_letters_lowercase = false;
+};
+
+$use_letters_uppercase = true;
+
+if(isset($_GET["use-letters-uppercase"]) && $_GET["use-letters-uppercase"] === "on") {
+    $use_letters_uppercase = false;
+};
+
+$use_numbers = true;
+
+if(isset($_GET["use-numbers"]) && $_GET["use-numbers"] === "on") {
+    $use_numbers = false;
+};
+
+$use_simbols = true;
+
+if(isset($_GET["use-simbols"]) && $_GET["use-simbols"] === "on") {
+    $use_simbols = false;
 };
 ?>
 

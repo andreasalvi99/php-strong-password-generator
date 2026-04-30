@@ -19,6 +19,22 @@
             <input type="checkbox" name="char-repetition" id="char-repetition" class="form-check-input">
             <label for="char-repetition" class="form-label">Ripeti caratteri</label>
         </div>
+        <div class="my-3">
+            <input type="checkbox" name="use-letters-lowercase" id="use-letters-lowercase" class="form-check-input">
+            <label for="use-letters-lowercase" class="form-label">Escludi lettere minuscole</label>
+        </div>
+        <div class="my-3">
+            <input type="checkbox" name="use-letters-uppercase" id="use-letters-uppercase" class="form-check-input">
+            <label for="use-letters-uppercase" class="form-label">Escludi lettere maiuscole</label>
+        </div>
+        <div class="my-3">
+            <input type="checkbox" name="use-numbers" id="use-numbers" class="form-check-input">
+            <label for="use-numbers" class="form-label">Escludi numeri</label>
+        </div>
+        <div class="my-3">
+            <input type="checkbox" name="use-simbols" id="use-simbols" class="form-check-input">
+            <label for="use-simbols" class="form-label">Escludi simboli</label>
+        </div>
         <button type="submit" class="btn btn-primary my-3 d-block">Invia</button>
     </form>
 </div>
