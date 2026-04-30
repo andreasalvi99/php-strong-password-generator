@@ -12,10 +12,9 @@ require_once "./functions.php"
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <h1>Ecco la tua password:</h1>
-        <p class="fs-4"><?php echo generate_password((int) $_GET["password-length"])?></p>
-</div>
-    
+    <div class="container text-center my-5">
+        <h1>Ecco la tua password:</h1>
+            <p class="fs-4"><span class="p-2"><?php echo generate_password((int) $_GET["password-length"])?></span></p>
+    </div>
 </body>
 </html>
