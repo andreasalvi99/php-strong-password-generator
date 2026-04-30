@@ -19,7 +19,7 @@ function generate_password($length) {
 
 //^ Apro il cliclo che si ripete fino al numero di volte indicato dall'input dell'utente
 
-    for($i = 0; $i <= $length; $i++) {
+    for($i = 0; $i < $length; $i++) {
 
     //^ Uso funzione rand per estrarre randomicamente ad ogni ciclo un carattere dalla strimga unica
 
@@ -47,7 +47,7 @@ function generate_password($length) {
 </head>
 <body>
 
-<h1>Ecco la tua password: <?php echo generate_password((int) $_GET["password-length"])?></h1>
+<h1>Ecco la tua password: <br><?php echo generate_password((int) $_GET["password-length"])?></h1>
     
 </body>
 </html>
