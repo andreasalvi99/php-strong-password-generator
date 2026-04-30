@@ -1,42 +1,6 @@
-<?php
-
-function generate_password($length) {
-
-//^ Inizializzo variabili con caratteri minuscoli, maiuscoli, numeri e speciali
-
-    $lowercase = "abcdefghijklmnopqrstuvwxyz";
-    $uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    $numbers = "1234567890";
-    $simbols = "!@#$%^&*()_+-";
-
-//^ Concateno le stringhe
-
-    $all_chars = $lowercase . $uppercase . $numbers . $simbols;
-
-//^ Definisco la variabile password come strimga vuota che andrà riempita di volta in volta con un ciclo
-
-    $password = "";
-
-//^ Apro il cliclo che si ripete fino al numero di volte indicato dall'input dell'utente
-
-    for($i = 0; $i < $length; $i++) {
-
-    //^ Uso funzione rand per estrarre randomicamente ad ogni ciclo un carattere dalla strimga unica
-
-        $random_char = $all_chars[rand(0, strlen($all_chars) -1 )];
-
-    //^ Ad ogni ciclo prendo il carattere estratto e lo concateno in password
-
-        $password .= $random_char;
-    };
-
-//^ Ritorno la password
-
-    return $password;
-};
-
+<?php 
+require_once "./functions.php"
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,10 +8,14 @@ function generate_password($length) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-
-<h1>Ecco la tua password: <br><?php echo generate_password((int) $_GET["password-length"])?></h1>
+<div class="container">
+    <h1>Ecco la tua password:</h1>
+        <p class="fs-4"><?php echo generate_password((int) $_GET["password-length"])?></p>
+</div>
     
 </body>
 </html>
