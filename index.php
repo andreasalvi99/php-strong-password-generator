@@ -9,14 +9,15 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
+    <h1 class="my-3">Generatore di password</h1>
 
-<h1>Generatore di password</h1>
-
-<form action="./result.php" method="GET">
-    <label for="password-length">Lunghezza password:</label>
-    <input type="number" name="password-length" id="password-length" min="6" value="6">
-    <button type="submit">Invia</button>
-</form>
+    <form action="./result.php" method="GET" class="form-control">
+        <label for="password-length" class="form-label">Lunghezza password:</label>
+        <input type="number" name="password-length" id="password-length" min="6" value="6" class="form-control">
+        <button type="submit" class="btn btn-primary my-3">Invia</button>
+    </form>
+</div>
     
 </body>
 </html>
