@@ -15,7 +15,11 @@
     <form action="./result.php" method="GET" class="form-control">
         <label for="password-length" class="form-label">Lunghezza password:</label>
         <input type="number" name="password-length" id="password-length" min="6" value="6" class="form-control">
-        <button type="submit" class="btn btn-primary my-3">Invia</button>
+        <div class="my-3">
+            <input type="checkbox" name="char-repetition" id="char-repetition" class="form-check-input">
+            <label for="char-repetition" class="form-label">Ripeti caratteri</label>
+        </div>
+        <button type="submit" class="btn btn-primary my-3 d-block">Invia</button>
     </form>
 </div>
     

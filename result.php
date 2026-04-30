@@ -1,5 +1,11 @@
 <?php 
-require_once "./functions.php"
+require_once "./functions.php";
+
+$repeat_char = false;
+
+if(isset($_GET["char-repetition"])) {
+    $repeat_char = true;
+};
 ?>
 
 <!DOCTYPE html>
