@@ -46,8 +46,7 @@ function generate_password($length) {
 //^ Se l'uente ha flaggato tutto allora è impossibile generare una password
         
     if($all_chars === "") {
-        echo "Impossibile generare password";
-        return;
+         return "Impossibile generare password";
     };
 
 //^ Apro il cliclo che si ripete fino a che la password non ha la lunghezza data dall'utente
