@@ -43,16 +43,17 @@ function generate_password($length) {
 
     $password = "";
 
-//^ Apro il cliclo che si ripete fino a che la password non ha la lunghezza data dall'utente
-
-    while(strlen($password) < $length) {
-
-    //^ Se l'uente ha flaggato tutto allora è impossibile generare una password
+//^ Se l'uente ha flaggato tutto allora è impossibile generare una password
         
     if($all_chars === "") {
         echo "Impossibile generare password";
         return;
     };
+
+//^ Apro il cliclo che si ripete fino a che la password non ha la lunghezza data dall'utente
+
+    while(strlen($password) < $length) {
+
 
     //^ Uso funzione rand per estrarre randomicamente ad ogni ciclo un carattere dalla strimga unica
 

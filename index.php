@@ -1,3 +1,49 @@
+<?php 
+
+session_start();
+
+require_once "./functions.php";
+
+$repeat_char = false;
+
+if(isset($_GET["char-repetition"]) && $_GET["char-repetition"] === "on") {
+    $repeat_char = true;
+};
+
+$use_letters_lowercase = true;
+
+if(isset($_GET["use-letters-lowercase"]) && $_GET["use-letters-lowercase"] === "on") {
+    $use_letters_lowercase = false;
+};
+
+$use_letters_uppercase = true;
+
+if(isset($_GET["use-letters-uppercase"]) && $_GET["use-letters-uppercase"] === "on") {
+    $use_letters_uppercase = false;
+};
+
+$use_numbers = true;
+
+if(isset($_GET["use-numbers"]) && $_GET["use-numbers"] === "on") {
+    $use_numbers = false;
+};
+
+$use_simbols = true;
+
+if(isset($_GET["use-simbols"]) && $_GET["use-simbols"] === "on") {
+    $use_simbols = false;
+};
+
+if(isset($_GET["password-length"]) && $_GET["password-length"] !== "") {
+
+$_SESSION["password"] = generate_password((int) $_GET["password-length"]);
+
+header("Location: ./result.php");
+exit;
+};
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +58,7 @@
 <div class="container">
     <h1 class="my-3">Generatore di password</h1>
 
-    <form action="./result.php" method="GET" class="form-control">
+    <form action="" method="GET" class="form-control">
         <label for="password-length" class="form-label">Lunghezza password:</label>
         <input type="number" name="password-length" id="password-length" min="6" value="6" class="form-control">
         <div class="my-3">
